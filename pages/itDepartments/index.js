@@ -18,6 +18,7 @@ export default function carpenter() {
       category: "",
       reason: "",
       desc: "",
+      resolved: "",
     };
   });
 
@@ -33,6 +34,7 @@ export default function carpenter() {
           firstName: session.user.name.FirstName,
           lastName: session.user.name.LastName,
           email: session.user.name.Email,
+          resolved: false,
         };
       });
     }

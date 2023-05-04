@@ -40,9 +40,13 @@ const ItDepartmentschema = new Schema({
     type: String,
     trim: true,
   },
+  resolved: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const ItDepartments =
-  models.ItDepartment || model("ItDepartments", ItDepartmentschema);
+  models.ItDepartments || model("ItDepartments", ItDepartmentschema);
 
 export default ItDepartments;

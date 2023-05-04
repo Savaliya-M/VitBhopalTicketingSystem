@@ -40,6 +40,10 @@ const Libraryschema = new Schema({
     type: String,
     trim: true,
   },
+  resolved: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const Library = models.Library || model("Library", Libraryschema);

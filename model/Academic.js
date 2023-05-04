@@ -40,6 +40,10 @@ const academicschema = new Schema({
     type: String,
     trim: true,
   },
+  resolved: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const academic = models.academic || model("academic", academicschema);

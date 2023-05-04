@@ -8,7 +8,7 @@ export default async function (req, res) {
     try {
       // create connection
       await dbConnect();
-
+      console.log({ ...req.body }, "dsfdf");
       const academicissue = new academic({ ...req.body });
       const saveissue = await academicissue.save();
       console.log(saveissue);

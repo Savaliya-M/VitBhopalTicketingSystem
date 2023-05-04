@@ -90,7 +90,7 @@ const Index = () => {
                     roomno={data.roomNo}
                     email={data.email}
                     desc={data.desc}
-                    status={data.resolved ? "completed" : "panding"}
+                    status={data.resolved ? "completed" : "pending"}
                   />
                 ))}
               </div>

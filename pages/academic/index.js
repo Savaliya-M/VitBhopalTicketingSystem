@@ -18,6 +18,7 @@ export default function carpenter() {
       category: "",
       reason: "",
       desc: "",
+      resolved: "",
     };
   });
 
@@ -33,6 +34,7 @@ export default function carpenter() {
           firstName: session.user.name.FirstName,
           lastName: session.user.name.LastName,
           email: session.user.name.Email,
+          resolved: false,
         };
       });
     }
@@ -137,12 +139,13 @@ export default function carpenter() {
 
   async function sendacademicdata(event) {
     event.preventDefault();
+    console.log(formdata);
     const option = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formdata),
     };
-    console.log(formdata);
+    console.log(option);
     const res = await fetch("http://localhost:3000/api/academic", option);
     const data = await res.json();
     if (data.hasError == false) {

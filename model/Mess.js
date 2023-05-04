@@ -40,8 +40,12 @@ const Messschema = new Schema({
     type: String,
     trim: true,
   },
+  resolved: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-const Mess = models.Mess || model("mess", Messschema);
+const Mess = models.mess || model("mess", Messschema);
 
 export default Mess;

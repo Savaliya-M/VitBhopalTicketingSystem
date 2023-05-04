@@ -40,6 +40,10 @@ const UBschema = new Schema({
     type: String,
     trim: true,
   },
+  resolved: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const UB = models.UB || model("UB", UBschema);
